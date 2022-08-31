@@ -1,0 +1,19 @@
+#main-container{
+  background-color: rgb(238, 226, 209);
+}
+
+
+.btn-coffe{
+  background-color: rgb(87, 57, 21);
+  color:white;
+}
+
+
+#total{
+position: sticky;
+bottom: 0;
+}
+
+#pedir-btn{
+  color:white;
+}
