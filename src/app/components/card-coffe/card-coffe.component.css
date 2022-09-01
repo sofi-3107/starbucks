@@ -2,3 +2,8 @@
   background-color: rgb(87, 57, 21);
   color:white;
 }
+
+img{
+  max-width: 150px;
+  max-height: 150px;
+}
