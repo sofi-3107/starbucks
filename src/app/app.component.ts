@@ -18,5 +18,6 @@ export class AppComponent {
 
   constructor(private service:ApiConsumerService){
     this.service.getProductos().subscribe((resp:any)=>this.productos=resp);
+    
   }
 }
