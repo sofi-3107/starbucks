@@ -1,11 +1,8 @@
 <div class="container-fluid p-3 "id="main-container">
 <div class="nav-bar btn-coffe p-2 text-center">Lista de delicias que ofrecemos</div>
- <app-card-coffe></app-card-coffe>
- <app-card-coffe></app-card-coffe>
-
- <app-card-coffe></app-card-coffe>
-
- <app-card-coffe></app-card-coffe>
+<div *ngFor="let p of productos">
+  {{p.nombre}}
+</div>
 
  <div id="total"class="nav-bar  btn-coffe p-2 text-center">
   <div class="row justify-content-around">
