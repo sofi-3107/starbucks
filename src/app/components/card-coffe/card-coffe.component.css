@@ -2,3 +2,22 @@
   background-color: rgb(87, 57, 21);
   color:white;
 }
+
+.price-text{
+  font-size: 25px;
+  color:rgb(87, 57, 21);
+}
+
+
+@media screen and (max-width:600px) {
+
+  .price-text{
+    font-size: 20px;
+  color:rgb(87, 57, 21);
+  }
+
+}
+
+.rounded-buttons-container{
+  min-height: 80px;
+}

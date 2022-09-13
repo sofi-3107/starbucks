@@ -14,6 +14,6 @@ export class ApiConsumerService {
 
 
    public getProductos(): Observable<any>{
-    return this.http.get('localhost:8000/productos');
+    return this.http.get('http://cafeteria-env.eba-hhuctfir.us-east-1.elasticbeanstalk.com/');
    }
 }
