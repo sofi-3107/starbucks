@@ -15,8 +15,10 @@ export class AppComponent {
   public productos:Array<Producto>=[];
   title = 'starbucks';
 
+  importeTotal:any=0;
 
   constructor(private service:ApiConsumerService){
     this.service.getProductos().subscribe((resp:any)=>this.productos=resp);
+    this.service.getImporteTotal().subscribe((resp:any)=>this.importeTotal=resp);
   }
 }

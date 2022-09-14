@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ApiConsumerService } from 'src/app/services/api-consumer.service';
 
 @Component({
   selector: 'app-card-coffe',
@@ -18,7 +19,9 @@ export class CardCoffeComponent implements OnInit {
   @Input()
   costoUnitario:number=0;
 
-  constructor() { }
+  constructor(private service:ApiConsumerService) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -32,6 +35,10 @@ export class CardCoffeComponent implements OnInit {
   LessOne(){
     this.cantidad==0?0:this.cantidad--;
     this.disponible<10?this.disponible++:this.disponible;
+  }
+
+  addtoImporteTotal(){
+    this.service.addToImporteTotal(this.costoUnitario*this.cantidad);
   }
 
 }
