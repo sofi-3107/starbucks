@@ -1,13 +1,16 @@
 <div class="container-fluid p-3 "id="main-container">
-  <div class="nav-bar btn-coffe p-2 text-center">Lista de delicias que ofrecemos</div>
-  <div *ngFor="let p of productos">
-    
-    <app-card-coffe [nombre]="p.nombre" [imagen]="p.imagen" [precio]="p.precioUnitario"></app-card-coffe>
-  </div>
+<div class="nav-bar btn-coffe p-2 text-center">Lista de delicias que ofrecemos</div>
+<div *ngFor="let p of productos">
+  <app-card-coffe [nombre]="p.nombre || ''" [costoUnitario]="p.precioUnitario || 0"
+    [cantidadEnStock]="p.cantidadEnStock || 0"
+
+
+  ></app-card-coffe>
+</div>
 
  <div id="total"class="nav-bar  btn-coffe p-2 text-center">
   <div class="row justify-content-around">
-    <p class="h3 col-2">Total:$17</p>
+    <p class="h3 col-2">Total:{{importeTotal}}</p>
     <button id="pedir-btn"class="btn btn-outline col-4">Pedir</button>
   </div>
 
