@@ -55,7 +55,7 @@ export class ApiConsumerService {
       return this.productosCarrito$.asObservable();
    }
 
-   public addProductToCart(p:Producto){
+   public addProductToCart(p:DetallePedido){
     this.productosCarrito=[...this.productosCarrito,p];
     this.productosCarrito$.next(this.productosCarrito);
    }
