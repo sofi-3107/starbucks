@@ -3,3 +3,12 @@ body{
   background-color: rgb(238, 226, 209);
 }
 
+.btn-coffe{
+  background-color: rgb(87, 57, 21);
+  color:white;
+}
+
+.form-group{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

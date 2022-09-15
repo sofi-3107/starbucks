@@ -1,0 +1,38 @@
+
+    <div class="card col-sm-12 col-lg-4 col-md-6 p-2">
+
+      <div class="card-header btn-coffe">
+        <h5 class="card-title">{{titulo}}</h5>
+      </div>
+      <div class="card-body">
+          <form action="" [formGroup]="clienteForm" (ngSubmit)="confirmarPedido(clienteForm.value)">
+            <div class="form-group">
+              <label for="doc">Documento: </label>
+              <input formControlName="documento"name="doc" type="number" placeholder="documento solo números">
+            </div>
+            <div class="form-group">
+              <label for="apel">Apellido: </label>
+              <input formControlName="apellido" name="apel" type="text" placeholder="apellido">
+            </div>
+            <div class="form-group">
+              <label for="nom">Nombre: </label>
+              <input formControlName="nombre" name="nom" type="text" placeholder="nombre">
+            </div>
+            <div class="form-group">
+              <label for="dom">Domicilio: </label>
+              <input formControlName="domicilio" name="dom" type="text" placeholder="domicilio">
+            </div>
+            <div class="form-group">
+              <label for="tel">Teléfono: </label>
+              <input formControlName="telefono" name="tel" type="tel" placeholder="número de teléfono">
+            </div>
+            <div class="justify-content-center">
+              <button id="submitClientBtn" type="submit" [disabled]="!clienteForm.valid" class=" btn btn-coffe">
+                Confirmar Pedido
+              </button>
+            </div>
+
+          </form>
+      </div>
+  </div>
+

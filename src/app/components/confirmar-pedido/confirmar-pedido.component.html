@@ -1,0 +1,20 @@
+
+  <div class="card p-2 col-md-6 col-lg-4 col-sm-12 m-3">
+
+    <div class="card-header btn-coffe">
+    <h5 class="card-title">{{titulo}}</h5>
+    </div>
+    <div class="card-body">
+
+        <ul *ngFor="let p of productos" class="list-group ">
+          <li class="list-group-item "> {{p.nombre || 'nada'}} ${{p.precioUnitario}}</li>
+          <li class="list-group-item">2 {{p.nombre || 'nada'}} $160</li>
+          <li class="list-group-item">2 {{p.nombre || 'nada'}} $160</li>
+        </ul>
+
+
+    </div>
+    <div class="card-footer btn-coffe ">
+
+    </div>
+

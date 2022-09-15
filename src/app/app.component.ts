@@ -21,4 +21,11 @@ export class AppComponent {
     this.service.getProductos().subscribe((resp:any)=>this.productos=resp);
     this.service.getImporteTotal().subscribe((resp:any)=>this.importeTotal=resp);
   }
+
+
+  addToCart(p:any){
+    this.service.addProductToCart(p);
+    console.log('AddToCart parent: '+ p.nombre);
+
+  }
 }
