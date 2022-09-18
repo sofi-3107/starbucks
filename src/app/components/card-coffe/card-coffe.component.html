@@ -1,23 +1,17 @@
 <div class="card p-2 col-md-3 col-sm-12 m-3">
 
   <div class="card-header btn-coffe">
-   <h5 class="card-title">{{nombre}}</h5>
+   <h5 class="card-title">{{dataSource.nombre}}</h5>
   </div>
   <div class="card-body">
-   <img src={{imagen}} class="rounded-circle float-start col-6">
+    <img src={{dataSource.imagen}} class="rounded-circle float-start col-6" alt="{{dataSource.nombre}}">
 
     <div class="row justify-content-around">
-      <p class="card-text col-6 ml-2 price-text">${{costoUnitario}}</p>
+      <p class="card-text col-6 ml-2 price-text">${{dataSource.precioUnitario}}</p>
 
       <input id="cantidadPedido"type="number" max="10" min="0">
     </div>
-    <!--<div class="row justify-content-around rounded-buttons-container">
-      <input  type="text" value={{cantidad}} class="m-3 col-4 input-control" placeholder="0">
-      <button (click)="addOne()" class="btn btn-coffe rounded-circle mx-2 col-3"  >+</button>
-    <button (click)="LessOne()" class="btn btn-coffe rounded-circle col-3">-</button>
-    </div>-->
-
   </div>
   <div class="card-footer btn-coffe ">
-    <p>Disponible: {{cantidadEnStock}}</p>
+    <p>Disponible: {{dataSource.cantidadEnStock}}</p>
   </div>
