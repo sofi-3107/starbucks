@@ -10,14 +10,10 @@ export class CardCoffeComponent implements OnInit {
 
   cantidad:number=0;
   disponible:number=10;
-  @Input()
-  nombre:string='';
-  @Input()
-  imagen:string='';
-  @Input()
   cantidadEnStock:number=0;
   @Input()
-  costoUnitario:number=0;
+  dataSource:any
+
 
   constructor(private service:ApiConsumerService) {
 
@@ -38,7 +34,7 @@ export class CardCoffeComponent implements OnInit {
   }
 
   addtoImporteTotal(){
-    this.service.addToImporteTotal(this.costoUnitario*this.cantidad);
+    this.service.addToImporteTotal(this.dataSource.precioUnitario*this.dataSource.cantidadEnStock);
   }
 
 

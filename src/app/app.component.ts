@@ -18,10 +18,13 @@ export class AppComponent {
   importeTotal:any=0;
 
   constructor(private service:ApiConsumerService){
-    this.service.getProductos().subscribe((resp:any)=>this.productos=resp);
-    this.service.getImporteTotal().subscribe((resp:any)=>this.importeTotal=resp);
+    this.service.getProductos().subscribe(resp=>{
+      this.productos=resp
+    });
+    this.service.getImporteTotal().subscribe(resp=>{
+      this.importeTotal=resp
+    });
   }
-
 
   addToCart(p:any){
     this.service.addProductToCart(p);

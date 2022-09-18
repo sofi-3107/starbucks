@@ -46,9 +46,39 @@ export class ApiConsumerService {
 
    public getProductos(): Observable<Producto[]>{
 
-    return this.http.get<Producto[]>('http://localhost:8000/').pipe(
-       catchError(this.handleError)
-    );
+    let data = new Observable<Producto[]>((obsever)=>{
+      obsever.next([
+        {
+          id:2,
+          nombre:"RATAS",
+          cantidadEnStock:12,
+          precioUnitario:435,
+          imagen:"https://image.petmd.com/files/2022-06/gray.dumbo_.rat_.jpg"
+        },
+        {
+          id:3,
+          nombre:"PALOMAS",
+          cantidadEnStock:22,
+          precioUnitario:495,
+          imagen:"https://www.investigacionyciencia.es/images/63200/articleImage-big.jpg"
+        },
+        {
+          id:4,
+          nombre:"PAPAS",
+          cantidadEnStock:223,
+          precioUnitario:41235,
+          imagen:"https://saborusa.com.pa/imagesmg/imagenes/5ff3e6a0b703f_potatoes-food-supermarket-agriculture-JG7QGNY.jpg"
+        },
+        {
+          id:5,
+          nombre:"ZAPATILLAS",
+          cantidadEnStock:4,
+          precioUnitario:4,
+          imagen:"https://phantom-telva.unidadeditorial.es/743169d664d4dfd749d96cd450f5cbdf/crop/163x0/1785x913/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/05/16596598871872.jpg"
+        },
+      ])
+    })
+    return data
    }
 
    public getProductosCarrito():Observable<DetallePedido[]>{
@@ -61,7 +91,7 @@ export class ApiConsumerService {
    }
 
    public popProductFromCart(p:Producto){
-    this.productosCarrito=this.productosCarrito.filter((c:Producto)=>c._id==p._id);
+    this.productosCarrito=this.productosCarrito.filter(c=>c.id==p.id);
     this.productosCarrito$.next(this.productosCarrito);
    }
 

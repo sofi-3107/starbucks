@@ -1,10 +1,9 @@
 export interface Producto{
-  _id?:number;
-  nombre?:string;
-  cantidadEnStock?:number;
-  precioUnitario?:number;
-  imagen?:string;
-
+  id:number;
+  nombre:string;
+  cantidadEnStock:number;
+  precioUnitario:number;
+  imagen:string;
 }
 
 export interface Cliente{
@@ -17,14 +16,15 @@ export interface Cliente{
 }
 
 export interface DetallePedido{
-_id?:number;
-producto?:Producto;
-cantidad:number
-
-}
-
-export interface Pedido{
-  _id?:number;
-  detallePedido:DetallePedido[];
-  cliente:Cliente;
-}
+  id?:number;
+  producto?:Producto;
+  cantidad:number
+  
+  }
+  
+  export interface Pedido{
+    id?:number;
+    detallePedido:DetallePedido[];
+    cliente:Cliente;
+  }
+  
